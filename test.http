@@ -1,12 +1,30 @@
 
 POST http://localhost:8080/api/chirps
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHktYWNjZXNzIiwic3ViIjoiYzY1NGNmMWUtNzM4Ni00N2RjLWFmYWYtOTcxMzY4NTUzOWRjIiwiZXhwIjoxNzkxNDYwMzUzLCJpYXQiOjE3OTE0NTY3NTN9.60cPeY5AVLlueMQGn1ncmpzfGcJ9bmIqGTJ-IMihsC0
 
 {
-    "body": "hello",
-    "user_id": "35dbc00e-0baa-4e39-834b-a44e90eacac5"
+    "body": "hello"
+}
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "email": "danny@gmail.com",
+    "password": "danny"
 }
 
+###
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+    "email": "danny@gmail.com",
+    "password": "danny"
+}
 ###
 
 GET http://localhost:8080/api/chirps
@@ -23,14 +41,7 @@ GET http://localhost:8080/admin/metrics
 
 GET http://localhost:8080/app/
 
-###
 
-POST http://localhost:8080/api/users
-Content-Type: application/json
-
-{
-    "email": "danny@gmail.com"
-}
 
 ###
 
