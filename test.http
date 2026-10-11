@@ -1,11 +1,55 @@
 
+
+GET http://localhost:8080/api/chirps?sort=asc
+ 
+###
+
+POST http://localhost:8080/api/polka/webhooks
+Content-Type: application/json
+Authorization: ApiKey f271c81ff7084ee5b99a5091b42d486e
+
+{
+  "event": "user.upgraded",
+  "data": {
+    "user_id": "ec9552ed-f833-4beb-9027-8a2792ba8044"
+  }
+}
+ 
+###
+
+DELETE http://localhost:8080/api/chirps/608d6391-2ed8-4712-9174-8f8489534908
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHktYWNjZXNzIiwic3ViIjoiNTExMDRhYjAtZDVlYy00ZjRjLWEyOWMtNDlhM2UzZDI0YzViIiwiZXhwIjoxNzkxNTUxNDU1LCJpYXQiOjE3OTE1NDc4NTV9.OLFB1DmiUxh1VPmRUm77I1kXrrjXs4zMeixdKCkUhvs
+
+ 
+###
+
+PUT http://localhost:8080/api/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHktYWNjZXNzIiwic3ViIjoiMDcyZWMyN2UtOTE4Zi00OWM3LTg3ZjktYjNlZjQ2OWZiMDI0IiwiZXhwIjoxNzkxNTUwMzQ4LCJpYXQiOjE3OTE1NDY3NDh9.m-ithF1NHhypSUnbQ9YbuQ_jh_ZetMa60h4ERnJzH_k
+
+{
+    "email": "danny@gmail.com",
+    "password": "danny"
+}
+###
+
 POST http://localhost:8080/api/chirps
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHktYWNjZXNzIiwic3ViIjoiYzY1NGNmMWUtNzM4Ni00N2RjLWFmYWYtOTcxMzY4NTUzOWRjIiwiZXhwIjoxNzkxNDYwMzUzLCJpYXQiOjE3OTE0NTY3NTN9.60cPeY5AVLlueMQGn1ncmpzfGcJ9bmIqGTJ-IMihsC0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHktYWNjZXNzIiwic3ViIjoiZWVlOWI4OTgtYTg5Yi00MzMxLTlkZmUtYTQ1Mzc5ZDljNGU0IiwiZXhwIjoxNzkxNjMxOTAzLCJpYXQiOjE3OTE2MjgzMDN9.09CwmjZJ-1AVq673NBCQgjSqNRHDE4j7RY0UudB761I
 
 {
     "body": "hello"
 }
+###
+
+POST http://localhost:8080/api/revoke
+Authorization: Bearer 7f357a6c51dbdf2de2a79d5634125ac797ff956ba0fd86821f54906f2912207b
+###
+
+POST http://localhost:8080/api/refresh
+Content-Type: application/json
+Authorization: Bearer 7f357a6c51dbdf2de2a79d5634125ac797ff956ba0fd86821f54906f2912207b
 ###
 
 POST http://localhost:8080/api/users
@@ -27,11 +71,15 @@ Content-Type: application/json
 }
 ###
 
+GET http://localhost:8080/api/chirps?author_id=4ff63eea-0dc8-4d15-b844-21e8a1a2ddd0
+
+### 
+
 GET http://localhost:8080/api/chirps
 
 ### 
 
-GET http://localhost:8080/api/chirps/6672b95c-e32d-452b-a467-8a89dbddf6b6
+GET http://localhost:8080/api/608d6391-2ed8-4712-9174-8f8489534908
 
 ###
 
